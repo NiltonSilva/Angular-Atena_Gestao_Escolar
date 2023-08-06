@@ -1,0 +1,6 @@
+:root {
+  --light-gray-95:hsl(0, 0%, 95%);
+  --light-gray-90: hsl(0, 0%, 90%);
+
+  --view-text: var(--gray);
+}

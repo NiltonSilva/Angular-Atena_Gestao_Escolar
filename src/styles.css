@@ -7,3 +7,35 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-row {
+  display: flex;
+  margin: 20px 10px 30px 10px;
+}
+
+.form-item {
+  margin: 0 10px;
+}
+
+.input_form {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 9px;
+  border-radius: 5px;
+  color: var(--view-text);
+  height: 35px;
+}
+
+.label_form {
+  padding: 0 9px;
+}
+
+.select_form {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 9px;
+  border-radius: 5px;
+  color: var(--view-text);
+  height: 35px;
+  border: 2px solid rgb(55, 55, 55);
+}

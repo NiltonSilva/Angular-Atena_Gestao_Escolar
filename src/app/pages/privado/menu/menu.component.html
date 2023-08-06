@@ -6,10 +6,14 @@
           <div class="lista_menu-item">
             <img class="icone_contexto" [src]="item.svgIcon" alt="" />
             <p class="titulo">{{ item.title }}</p>
-            <div class="container-icone-seta" *ngIf="item.open">
+            <div
+              class="container-icone-seta"
+              *ngIf="item.open"
+              (click)="mudarIconeSeta()"
+            >
               <img
                 class="icone-seta"
-                src="assets/icones/angle-down-light.svg"
+                src="assets/icones/{{ iconeSeta }}.svg"
                 alt=""
               />
             </div>

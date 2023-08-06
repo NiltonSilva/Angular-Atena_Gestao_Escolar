@@ -1,0 +1,20 @@
+.container-novo_aluno > h2 {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding-bottom: 30px;
+}
+
+.numeroMatricula,
+.dataMatricula {
+  height: 35px;
+  padding: 0 9px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(55, 55, 55);
+  border-radius: 5px;
+  background: rgb(230, 230, 230);
+  font-weight: bold;
+}

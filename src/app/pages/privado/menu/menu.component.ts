@@ -9,9 +9,17 @@ import { IMenu, appMenu } from './menu';
 export class MenuComponent implements OnInit {
 
   appMenu: IMenu = appMenu;
+  iconeSeta: string = 'angle-right-light';
 
   constructor() { }
 
   ngOnInit(): void { }
 
+  mudarIconeSeta(): string {
+    if (this.iconeSeta == "angle-right-light") {
+      return this.iconeSeta = "angle-down-light";
+    } else {
+      return this.iconeSeta = "angle-right-light"
+    }
+  }
 }

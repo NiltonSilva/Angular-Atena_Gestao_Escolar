@@ -1,1 +1,96 @@
-<section></section>
+<section class="container-novo_aluno">
+  <h2>INFORMAÇÕES DO NOVO ALUNO</h2>
+  <form action="">
+    <div class="form-row">
+      <div class="col-2 form-item">
+        <label class="label_form" for="matricula">Número Matrícula: </label>
+        <p class="numeroMatricula">{{ numMatricula }}</p>
+      </div>
+      <div class="col-6 form-item">
+        <label class="label_form" for="aluno"> Aluno:</label>
+        <input
+          type="text"
+          class="input_form"
+          placeholder="Nome completo do aluno"
+        />
+      </div>
+      <div class="col-3 form-item">
+        <label class="label_form" for="serie"> Série:</label>
+        <select name="serie" class="select_form">
+          <option value="sext_fun">6º - Fundamental II</option>
+          <option value="seti_fun">7º - Fundamental II</option>
+          <option value="oita_fun">8º - Fundamental II</option>
+          <option value="nono_fun">9º - Fundamental II</option>
+          <option value="prim_med">1º - Médio</option>
+          <option value="segu_med">2º - Médio</option>
+          <option value="terc_med">3º - Médio</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-3 form-item">
+        <label class="label_form" for="dataNascimento"
+          >Data de Nascimento</label
+        >
+        <input type="date" class="input_form" />
+      </div>
+      <div class="col-4 form-item">
+        <label class="label_form" for="rg">Número RG:</label>
+        <input type="text" class="input_form" placeholder="Número do RG" />
+      </div>
+      <div class="col-4 form-item">
+        <label class="label_form" for="rg">Número CPF:</label>
+        <input type="text" class="input_form" placeholder="Número do CPF" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-5 form-item">
+        <label class="label_form" for="nomeMae">Mãe:</label>
+        <input type="text" class="input_form" placeholder="Nome da mãe" />
+      </div>
+      <div class="col-3 form-item">
+        <label class="label_form" for="foneMae1">Telefone mãe:</label>
+        <input type="text" class="input_form" placeholder="(xx)xxxx-xxxx" />
+      </div>
+      <div class="col-3 form-item">
+        <label class="label_form" for="foneMae2">Celular mãe:</label>
+        <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-5 form-item">
+        <label class="label_form" for="nomePai">Pai:</label>
+        <input type="text" class="input_form" placeholder="Nome do pai" />
+      </div>
+      <div class="col-3 form-item">
+        <label class="label_form" for="fonePai1">Telefone pai:</label>
+        <input type="text" class="input_form" placeholder="(xx)xxxx-xxxx" />
+      </div>
+      <div class="col-3 form-item">
+        <label class="label_form" for="fonePai2">Celular pai 2:</label>
+        <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-5 form-item">
+        <label class="label_form" for="foto">Foto</label>
+        <input class="input_form" type="file" name="" id="" />
+      </div>
+      <div class="col-3 form-item">
+        <label for="nee">Necessidade Atenção Especial?</label>
+        <select class="select_form" name="" id="">
+          <option value="nao">Não</option>
+          <option value="sim">Sim</option>
+        </select>
+      </div>
+      <div class="col-3 form-item">
+        <label class="label_form" for="dataMatricula">Data de matrícula:</label>
+        <p class="dataMatricula">{{ dataFormatada }}</p>
+      </div>
+    </div>
+  </form>
+</section>
