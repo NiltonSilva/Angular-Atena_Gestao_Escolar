@@ -28,11 +28,12 @@ export const appMenu: IMenu = {
     {
       title: 'Home',
       svgIcon: './../../../../assets/icones/house-light.svg',
+      source: 'home'
     },
     {
       title: 'Alunos',
       svgIcon: './../../../../assets/icones/person-light.svg',
-      open: true
+      open: true,
     },
     {
       title: 'Professores',

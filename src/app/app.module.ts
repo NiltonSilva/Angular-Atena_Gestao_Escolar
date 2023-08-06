@@ -10,6 +10,9 @@ import { NovoAlunoComponent } from './pages/privado/alunos/novo-aluno/novo-aluno
 import { ListarAlunosComponent } from './pages/privado/alunos/listar-alunos/listar-alunos.component';
 import { MenuComponent } from './pages/privado/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BotaoVoltarComponent } from './pages/shared/componentes/botao-voltar/botao-voltar.component';
+import { BotaoSalvarComponent } from './pages/shared/componentes/botao-salvar/botao-salvar.component';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +22,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RodapeComponent,
     NovoAlunoComponent,
     ListarAlunosComponent,
-    MenuComponent
+    MenuComponent,
+    BotaoVoltarComponent,
+    BotaoSalvarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

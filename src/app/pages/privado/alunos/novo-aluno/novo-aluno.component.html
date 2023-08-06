@@ -1,5 +1,13 @@
 <section class="container-novo_aluno">
-  <h2>INFORMAÇÕES DO NOVO ALUNO</h2>
+  <div class="novo_aluno-header">
+    <div class="header-title">
+      <h2>INFORMAÇÕES DO NOVO ALUNO</h2>
+    </div>
+    <div class="header-buttons">
+      <app-botao-voltar></app-botao-voltar>
+      <app-botao-salvar></app-botao-salvar>
+    </div>
+  </div>
   <form action="">
     <div class="form-row">
       <div class="col-2 form-item">
@@ -17,6 +25,7 @@
       <div class="col-3 form-item">
         <label class="label_form" for="serie"> Série:</label>
         <select name="serie" class="select_form">
+          <option selected value="">Selecione uma série</option>
           <option value="sext_fun">6º - Fundamental II</option>
           <option value="seti_fun">7º - Fundamental II</option>
           <option value="oita_fun">8º - Fundamental II</option>
