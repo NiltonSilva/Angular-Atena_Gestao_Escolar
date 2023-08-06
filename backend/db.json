@@ -1,0 +1,9 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "json-server",
+      "author": "typicode"
+    }
+  ]
+}

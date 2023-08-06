@@ -1,0 +1,16 @@
+.container-menu {
+  border: 2px solid red;
+  box-sizing: border-box;
+  width: 300px;
+  padding-left: 75px;
+}
+
+.lista_menu {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.lista_menu-item {
+  margin: 10px 0;
+  line-height: 32px;
+}
