@@ -2,7 +2,6 @@
   border: 2px solid red;
   box-sizing: border-box;
   width: 300px;
-  padding-left: 75px;
 }
 
 .lista_menu {
@@ -13,4 +12,27 @@
 .lista_menu-item {
   margin: 10px 0;
   line-height: 32px;
+  cursor: pointer;
+
+}
+
+.icone_contexto {
+  width: 20px;
+  margin: auto 25px;
+}
+
+.titulo {
+  display: inline-block;
+  width: 150px;
+  margin: 5px 0;
+}
+
+.container-icone-seta {
+  display: inline-block;
+  width: 74px;
+}
+
+.icone-seta {
+  width: 15px;
+  margin-left: 30px;
 }

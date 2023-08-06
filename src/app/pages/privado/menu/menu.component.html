@@ -2,17 +2,19 @@
   <div class="container-menu">
     <nav>
       <ul class="lista_menu">
-        <li class="lista_menu-item">
-          <i class="fas house-light"></i>
-          HOME
+        <li *ngFor="let item of appMenu.itens">
+          <div class="lista_menu-item">
+            <img class="icone_contexto" [src]="item.svgIcon" alt="" />
+            <p class="titulo">{{ item.title }}</p>
+            <div class="container-icone-seta" *ngIf="item.open">
+              <img
+                class="icone-seta"
+                src="assets/icones/angle-down-light.svg"
+                alt=""
+              />
+            </div>
+          </div>
         </li>
-        <li class="lista_menu-item">ALUNOS</li>
-        <li class="lista_menu-item">PROFESSORES</li>
-        <li class="lista_menu-item">BIBLIOTECA</li>
-        <li class="lista_menu-item">FINANCEIRO</li>
-        <li class="lista_menu-item">SÉRIES</li>
-        <li class="lista_menu-item">FUNCIONÁRIOS</li>
-        <li class="lista_menu-item">CONFIGURAÇÕES</li>
       </ul>
     </nav>
   </div>
