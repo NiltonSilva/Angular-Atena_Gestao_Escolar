@@ -1,5 +1,5 @@
 .container-menu {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   box-sizing: border-box;
   width: 300px;
 }
@@ -13,7 +13,6 @@
   margin: 10px 0;
   line-height: 32px;
   cursor: pointer;
-
 }
 
 .icone_contexto {

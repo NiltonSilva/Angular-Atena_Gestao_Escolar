@@ -20,6 +20,7 @@
           type="text"
           class="input_form"
           placeholder="Nome completo do aluno"
+          name="aluno"
         />
       </div>
       <div class="col-3 form-item">
@@ -85,12 +86,12 @@
     </div>
 
     <div class="form-row">
-      <div class="col-5 form-item">
-        <label class="label_form" for="foto">Foto</label>
-        <input class="input_form" type="file" name="" id="" />
+      <div class="col-4 form-item" id="item-label_foto">
+        <label class="label_form labelFoto" for="foto">Enviar foto</label>
+        <input class="input_form" type="file" id="foto" accept="image/*" />
       </div>
-      <div class="col-3 form-item">
-        <label for="nee">Necessidade Atenção Especial?</label>
+      <div class="col-4 form-item">
+        <label for="nee">Necessidades Educacionais Especiais?</label>
         <select class="select_form" name="" id="">
           <option value="nao">Não</option>
           <option value="sim">Sim</option>

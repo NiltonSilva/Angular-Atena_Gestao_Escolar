@@ -2,22 +2,20 @@
   <div class="container-menu">
     <nav>
       <ul class="lista_menu">
-        <li *ngFor="let item of appMenu.itens">
-          <div class="lista_menu-item">
-            <img class="icone_contexto" [src]="item.svgIcon" alt="" />
-            <p class="titulo">{{ item.title }}</p>
-            <div
-              class="container-icone-seta"
-              *ngIf="item.open"
-              (click)="mudarIconeSeta()"
-            >
-              <img
-                class="icone-seta"
-                src="assets/icones/{{ iconeSeta }}.svg"
-                alt=""
-              />
+        <li *ngFor="let item of appMenu.itens" (click)="mudarIconeSeta()">
+          <a routerLink="{{ item.source }}">
+            <div class="lista_menu-item">
+              <img class="icone_contexto" [src]="item.svgIcon" alt="" />
+              <p class="titulo">{{ item.title }}</p>
+              <div class="container-icone-seta" *ngIf="item.open">
+                <img
+                  class="icone-seta"
+                  src="assets/icones/{{ iconeSeta }}.svg"
+                  alt=""
+                />
+              </div>
             </div>
-          </div>
+          </a>
         </li>
       </ul>
     </nav>

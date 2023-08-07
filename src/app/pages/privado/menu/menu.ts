@@ -28,21 +28,24 @@ export const appMenu: IMenu = {
     {
       title: 'Home',
       svgIcon: './../../../../assets/icones/house-light.svg',
-      source: 'home'
+      source: '/home'
     },
     {
       title: 'Alunos',
       svgIcon: './../../../../assets/icones/person-light.svg',
+      source: '/novoAluno',
       open: true,
     },
     {
       title: 'Professores',
       svgIcon: './../../../../assets/icones/person-chalkboard-light.svg',
+      source: '/novoProfessor',
       open: true
     },
     {
       title: 'Biblioteca',
       svgIcon: './../../../../assets/icones/books-light.svg',
+      source: 'biblioteca'
     },
     {
       title: 'Financeiro',

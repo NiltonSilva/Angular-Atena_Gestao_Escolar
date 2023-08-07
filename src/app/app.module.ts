@@ -12,6 +12,8 @@ import { MenuComponent } from './pages/privado/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BotaoVoltarComponent } from './pages/shared/componentes/botao-voltar/botao-voltar.component';
 import { BotaoSalvarComponent } from './pages/shared/componentes/botao-salvar/botao-salvar.component';
+import { BibliotecaComponent } from './pages/privado/biblioteca/biblioteca.component';
+import { Error404Component } from './pages/privado/shared/componentes/error404/error404.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { BotaoSalvarComponent } from './pages/shared/componentes/botao-salvar/bo
     ListarAlunosComponent,
     MenuComponent,
     BotaoVoltarComponent,
-    BotaoSalvarComponent
+    BotaoSalvarComponent,
+    BibliotecaComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

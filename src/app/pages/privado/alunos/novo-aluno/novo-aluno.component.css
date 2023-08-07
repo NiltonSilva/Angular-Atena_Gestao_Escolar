@@ -40,6 +40,32 @@ app-botao-salvar {
   font-weight: bold;
 }
 
-.mat-mdc-raised-button.mat-unthemed {
+input[type="file"] {
+  display: none;
+}
 
+#item-label_foto {
+  display: flex;
+  align-items: flex-end;
+}
+
+.labelFoto {
+  padding: 20px;
+  width: 289.5px;
+  height: 55px;
+  background: #8a8a8a;
+  color: #e7e7e7;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .5s;
+  border: 1px solid #4d4b4b;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelFoto:hover  {
+  color: #fff;
+  background: #707070;
 }
