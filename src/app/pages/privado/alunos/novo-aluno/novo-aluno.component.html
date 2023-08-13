@@ -10,6 +10,7 @@
   </div>
   <form action="" [formGroup]="formulario">
     <div class="container-formulario">
+      <h2>DADOS PESSOAIS</h2>
       <div class="form-row">
         <div class="col-2 form-item">
           <label class="label_form" for="matricula">Número Matrícula: </label>
@@ -51,7 +52,7 @@
 
       <div class="form-row">
         <div class="col-3 form-item">
-          <label class="label_form" for="dataNascimento"
+          <label mask="d0/M0/0000" class="label_form" for="dataNascimento"
             >Data de Nascimento</label
           >
           <input
@@ -75,7 +76,13 @@
         </div>
         <div class="col-4 form-item">
           <label class="label_form" for="rg">Número CPF:</label>
-          <input type="text" class="input_form" placeholder="Número do CPF" />
+          <input
+            type="text"
+            class="input_form"
+            placeholder="Número do CPF"
+            mask="CPF_CNPJ"
+            maxlength="14"
+          />
         </div>
       </div>
 
@@ -102,18 +109,20 @@
         <div class="col-3 form-item">
           <label class="label_form" for="telefoneMae">Telefone mãe:</label>
           <input
-            type="text"
+            type="tel"
             class="input_form"
             placeholder="(xx)xxxx-xxxx"
+            mask="(00) 0000-0000"
             formControlName="telefoneMae"
           />
         </div>
         <div class="col-3 form-item">
           <label class="label_form" for="celularMae">Celular mãe:</label>
           <input
-            type="text"
+            type="tel"
             class="input_form"
             placeholder="(xx)9xxxx-xxxx"
+            mask="(00) 00000-0000"
             formControlName="celularMae"
           />
           <div
@@ -141,18 +150,20 @@
         <div class="col-3 form-item">
           <label class="label_form" for="telefonePai">Telefone pai:</label>
           <input
-            type="text"
+            type="tel"
             class="input_form"
             placeholder="(xx)xxxx-xxxx"
+            mask="(00) 0000-0000"
             formControlName="telefonePai"
           />
         </div>
         <div class="col-3 form-item">
           <label class="label_form" for="celularPai">Celular pai:</label>
           <input
-            type="text"
+            type="tel"
             class="input_form"
             placeholder="(xx)9xxxx-xxxx"
+            mask="(00) 00000-0000"
             formControlName="celularPai"
           />
         </div>
@@ -180,6 +191,7 @@
     </div>
 
     <div class="container-formulario" formGroupName="endereco">
+      <h2>ENDEREÇO</h2>
       <div class="form-row">
         <div class="col-3 form-item">
           <label class="label_form" for="cep">CEP:</label>
@@ -187,6 +199,7 @@
             class="input_form"
             type="text"
             placeholder="CEP"
+            mask="00000-000"
             formControlName="cep"
           />
           <div
@@ -285,6 +298,7 @@
     </div>
 
     <div class="container-formulario">
+      <h2>RESPONSÁVEL FINANCEIRO</h2>
       <div class="form-row">
         <div class="col-5 form-item">
           <label class="label_form" for="responsavelFinanceiro"
@@ -314,6 +328,8 @@
             type="text"
             class="input_form"
             placeholder="CPF Responsável Financeiro"
+            mask="CPF_CNPJ"
+            maxlength="14"
             formControlName="cpfRespFinanceiro"
           />
           <div
@@ -331,9 +347,10 @@
             >Celular Resp. Financeiro:</label
           >
           <input
-            type="text"
+            type="tel"
             class="input_form"
             placeholder="(xx)9xxxx-xxxx"
+            mask="(00) 00000-0000"
             formControlName="celularRespFinanceiro"
           />
           <div

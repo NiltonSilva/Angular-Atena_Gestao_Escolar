@@ -15,7 +15,7 @@ import { BotaoSalvarComponent } from './pages/privado/shared/componentes/botao-s
 import { BibliotecaComponent } from './pages/privado/biblioteca/biblioteca.component';
 import { Error404Component } from './pages/privado/shared/componentes/error404/error404.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -35,7 +35,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

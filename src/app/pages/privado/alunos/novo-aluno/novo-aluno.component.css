@@ -26,6 +26,19 @@ app-botao-salvar {
   border-radius: 5px;
 }
 
+.container-formulario {
+  /* border: 1px solid rgb(173, 173, 173); */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 1px;
+  background: #e4f4fd;
+}
+
+.container-formulario > h2 {
+  display: flex;
+  justify-content: center;
+}
+
 .numeroMatricula,
 .dataMatricula {
   height: 35px;
@@ -51,7 +64,8 @@ input[type="file"] {
 
 .labelFoto {
   padding: 20px;
-  width: 289.5px;
+  /* width: 289.5px; */
+  width: 100%;
   height: 55px;
   background: #8a8a8a;
   color: #e7e7e7;
