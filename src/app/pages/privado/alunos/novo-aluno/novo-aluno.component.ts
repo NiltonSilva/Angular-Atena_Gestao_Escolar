@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-novo-aluno',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoAlunoComponent implements OnInit {
 
+  formulario!: FormGroup;
   numAno: number = 0;
   numMes: number = 0;
   numDia: number = 0;
@@ -22,9 +24,33 @@ export class NovoAlunoComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+
+    this.formulario = this.formBuilder.group({
+      numeroMatricula: [`${this.numMatricula}`, Validators.required],
+      nomeAluno: ['', Validators.required],
+      serie: ['', [Validators.required]],
+      dataNascimento: ['', [Validators.required]],
+      numeroRg: [''],
+      numeroCpf: ['', [Validators.minLength(11)]],
+      endereco: this.formBuilder.group({
+        cep: ['', Validators.compose([Validators.required, Validators.maxLength(9)])],
+        logradouro: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
+        numeroCasa: ['', Validators.required],
+        complemento: [''],
+        bairro: ['', Validators.required],
+        cidade: ['', Validators.required],
+        estado: ['', Validators.required],
+      }),
+      responsavelFinanceiro: ['', Validators.required],
+      cpfRespFinanceiro: ['', Validators.compose([Validators.required, Validators.minLength(11)])],
+      celularRespFinanceiro: ['', Validators.required]
+    })
+
     this.gerarNumeroMatricula()
     let dataMatricula = new Date();
   }

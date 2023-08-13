@@ -10,10 +10,11 @@ import { NovoAlunoComponent } from './pages/privado/alunos/novo-aluno/novo-aluno
 import { ListarAlunosComponent } from './pages/privado/alunos/listar-alunos/listar-alunos.component';
 import { MenuComponent } from './pages/privado/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BotaoVoltarComponent } from './pages/shared/componentes/botao-voltar/botao-voltar.component';
-import { BotaoSalvarComponent } from './pages/shared/componentes/botao-salvar/botao-salvar.component';
+import { BotaoVoltarComponent } from './pages/privado/shared/componentes/botao-voltar/botao-voltar.component';
+import { BotaoSalvarComponent } from './pages/privado/shared/componentes/botao-salvar/botao-salvar.component';
 import { BibliotecaComponent } from './pages/privado/biblioteca/biblioteca.component';
 import { Error404Component } from './pages/privado/shared/componentes/error404/error404.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { Error404Component } from './pages/privado/shared/componentes/error404/e
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  mudarIconeSeta(): string {
+  mudarIconeSeta(event: Event): string {
     if (this.iconeSeta == "angle-right-light") {
       return this.iconeSeta = "angle-down-light";
     } else {

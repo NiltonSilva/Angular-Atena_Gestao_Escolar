@@ -8,98 +8,200 @@
       <app-botao-salvar></app-botao-salvar>
     </div>
   </div>
-  <form action="">
-    <div class="form-row">
-      <div class="col-2 form-item">
-        <label class="label_form" for="matricula">Número Matrícula: </label>
-        <p class="numeroMatricula">{{ numMatricula }}</p>
+  <form action="" [formGroup]="formulario">
+    <div class="container-formulario">
+      <div class="form-row">
+        <div class="col-2 form-item">
+          <label class="label_form" for="matricula">Número Matrícula: </label>
+          <p class="numeroMatricula">{{ numMatricula }}</p>
+        </div>
+        <div class="col-6 form-item">
+          <label class="label_form" for="aluno"> Aluno:</label>
+          <input
+            type="text"
+            class="input_form"
+            placeholder="Nome completo do aluno"
+            name="aluno"
+            formControlName="nomeAluno"
+          />
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="serie"> Série:</label>
+          <select name="serie" class="select_form">
+            <option selected value="">Selecione uma série</option>
+            <option value="sext_fun">6º - Fundamental II</option>
+            <option value="seti_fun">7º - Fundamental II</option>
+            <option value="oita_fun">8º - Fundamental II</option>
+            <option value="nono_fun">9º - Fundamental II</option>
+            <option value="prim_med">1º - Médio</option>
+            <option value="segu_med">2º - Médio</option>
+            <option value="terc_med">3º - Médio</option>
+          </select>
+        </div>
       </div>
-      <div class="col-6 form-item">
-        <label class="label_form" for="aluno"> Aluno:</label>
-        <input
-          type="text"
-          class="input_form"
-          placeholder="Nome completo do aluno"
-          name="aluno"
-        />
+
+      <div class="form-row">
+        <div class="col-3 form-item">
+          <label class="label_form" for="dataNascimento"
+            >Data de Nascimento</label
+          >
+          <input type="date" class="input_form" />
+        </div>
+        <div class="col-4 form-item">
+          <label class="label_form" for="rg">Número RG:</label>
+          <input type="text" class="input_form" placeholder="Número do RG" />
+        </div>
+        <div class="col-4 form-item">
+          <label class="label_form" for="rg">Número CPF:</label>
+          <input type="text" class="input_form" placeholder="Número do CPF" />
+        </div>
       </div>
-      <div class="col-3 form-item">
-        <label class="label_form" for="serie"> Série:</label>
-        <select name="serie" class="select_form">
-          <option selected value="">Selecione uma série</option>
-          <option value="sext_fun">6º - Fundamental II</option>
-          <option value="seti_fun">7º - Fundamental II</option>
-          <option value="oita_fun">8º - Fundamental II</option>
-          <option value="nono_fun">9º - Fundamental II</option>
-          <option value="prim_med">1º - Médio</option>
-          <option value="segu_med">2º - Médio</option>
-          <option value="terc_med">3º - Médio</option>
-        </select>
+
+      <div class="form-row">
+        <div class="col-5 form-item">
+          <label class="label_form" for="nomeMae">Mãe:</label>
+          <input type="text" class="input_form" placeholder="Nome da mãe" />
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="foneMae1">Telefone mãe:</label>
+          <input type="text" class="input_form" placeholder="(xx)xxxx-xxxx" />
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="foneMae2">Celular mãe:</label>
+          <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-5 form-item">
+          <label class="label_form" for="nomePai">Pai:</label>
+          <input type="text" class="input_form" placeholder="Nome do pai" />
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="fonePai1">Telefone pai:</label>
+          <input type="text" class="input_form" placeholder="(xx)xxxx-xxxx" />
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="fonePai2">Celular pai:</label>
+          <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-4 form-item" id="item-label_foto">
+          <label class="label_form labelFoto" for="foto">Enviar foto</label>
+          <input class="input_form" type="file" id="foto" accept="image/*" />
+        </div>
+        <div class="col-4 form-item">
+          <label for="nee">Necessidades Educacionais Especiais?</label>
+          <select class="select_form" name="" id="">
+            <option value="nao">Não</option>
+            <option value="sim">Sim</option>
+          </select>
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="dataMatricula"
+            >Data de matrícula:</label
+          >
+          <p class="dataMatricula">{{ dataFormatada }}</p>
+        </div>
       </div>
     </div>
 
-    <div class="form-row">
-      <div class="col-3 form-item">
-        <label class="label_form" for="dataNascimento"
-          >Data de Nascimento</label
-        >
-        <input type="date" class="input_form" />
+    <div class="container-formulario" formGroupName="endereco">
+      <div class="form-row">
+        <div class="col-3 form-item">
+          <label class="label_form" for="cep">CEP:</label>
+          <input
+            class="input_form"
+            type="text"
+            placeholder="CEP"
+            formControlName="cep"
+          />
+        </div>
+        <div class="col-5 form-item">
+          <label class="label_form" for="logradouro">Lograudoro:</label>
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Logradouro"
+            formControlName="logradouro"
+          />
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="numeroCasa">Nº:</label>
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Número da casa"
+            formControlName="numeroCasa"
+          />
+        </div>
       </div>
-      <div class="col-4 form-item">
-        <label class="label_form" for="rg">Número RG:</label>
-        <input type="text" class="input_form" placeholder="Número do RG" />
-      </div>
-      <div class="col-4 form-item">
-        <label class="label_form" for="rg">Número CPF:</label>
-        <input type="text" class="input_form" placeholder="Número do CPF" />
+      <div class="form-row">
+        <div class="col-4 form-item">
+          <label class="label_form" for="complemento">Complemento:</label>
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Complemento"
+            formControlName="complemento"
+          />
+        </div>
+        <div class="col-4 form-item">
+          <label class="label_form" for="bairro">Bairro:</label>
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Bairro"
+            formControlName="bairro"
+          />
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="cidade">Cidade:</label>
+          <input
+            class="input_form"
+            type="text"
+            placeholder="Cidade"
+            formControlName="cidade"
+          />
+        </div>
       </div>
     </div>
 
-    <div class="form-row">
-      <div class="col-5 form-item">
-        <label class="label_form" for="nomeMae">Mãe:</label>
-        <input type="text" class="input_form" placeholder="Nome da mãe" />
-      </div>
-      <div class="col-3 form-item">
-        <label class="label_form" for="foneMae1">Telefone mãe:</label>
-        <input type="text" class="input_form" placeholder="(xx)xxxx-xxxx" />
-      </div>
-      <div class="col-3 form-item">
-        <label class="label_form" for="foneMae2">Celular mãe:</label>
-        <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="col-5 form-item">
-        <label class="label_form" for="nomePai">Pai:</label>
-        <input type="text" class="input_form" placeholder="Nome do pai" />
-      </div>
-      <div class="col-3 form-item">
-        <label class="label_form" for="fonePai1">Telefone pai:</label>
-        <input type="text" class="input_form" placeholder="(xx)xxxx-xxxx" />
-      </div>
-      <div class="col-3 form-item">
-        <label class="label_form" for="fonePai2">Celular pai 2:</label>
-        <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="col-4 form-item" id="item-label_foto">
-        <label class="label_form labelFoto" for="foto">Enviar foto</label>
-        <input class="input_form" type="file" id="foto" accept="image/*" />
-      </div>
-      <div class="col-4 form-item">
-        <label for="nee">Necessidades Educacionais Especiais?</label>
-        <select class="select_form" name="" id="">
-          <option value="nao">Não</option>
-          <option value="sim">Sim</option>
-        </select>
-      </div>
-      <div class="col-3 form-item">
-        <label class="label_form" for="dataMatricula">Data de matrícula:</label>
-        <p class="dataMatricula">{{ dataFormatada }}</p>
+    <div class="container-formulario">
+      <div class="form-row">
+        <div class="col-5 form-item">
+          <label class="label_form" for="responsavelFinanceiro"
+            >Resp. Financeiro:</label
+          >
+          <input
+            type="text"
+            class="input_form"
+            placeholder="Responsável Financeiro"
+            formControlName="responsavelFinanceiro"
+          />
+        </div>
+        <div class="col-3 form-item">
+          <label class="label_form" for="cpfResponsavelFinanceiro"
+            >CPF Resp. Financeiro:</label
+          >
+          <input
+            type="text"
+            class="input_form"
+            placeholder="CPF Responsável Financeiro"
+            formControlName=""
+          />
+        </div>
+        <div class="col-3 form-item">
+          <label
+            class="label_form"
+            for="CelularRespFinanceiro"
+            formControlName="celularRespFinanceiro"
+            >Celular Resp. Financeiro:</label
+          >
+          <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
+        </div>
       </div>
     </div>
   </form>
