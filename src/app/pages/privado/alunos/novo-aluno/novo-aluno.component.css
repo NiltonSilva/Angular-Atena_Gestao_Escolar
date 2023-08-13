@@ -69,3 +69,11 @@ input[type="file"] {
   color: #fff;
   background: #707070;
 }
+
+.mensagem__erro {
+  font-size: 12px;
+  margin-left: 5px;
+  color: red;
+  margin-top: 0px;
+  margin-bottom: -18px;
+}

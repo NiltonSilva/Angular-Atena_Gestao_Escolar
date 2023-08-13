@@ -37,6 +37,10 @@ export class NovoAlunoComponent implements OnInit {
       dataNascimento: ['', [Validators.required]],
       numeroRg: [''],
       numeroCpf: ['', [Validators.minLength(11)]],
+      nomeMae: ['', Validators.required],
+      telefoneMae: ['', Validators.required],
+      celularMae: ['', Validators.required],
+      nomePai: ['', Validators.required],
       endereco: this.formBuilder.group({
         cep: ['', Validators.compose([Validators.required, Validators.maxLength(9)])],
         logradouro: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
@@ -49,9 +53,9 @@ export class NovoAlunoComponent implements OnInit {
       responsavelFinanceiro: ['', Validators.required],
       cpfRespFinanceiro: ['', Validators.compose([Validators.required, Validators.minLength(11)])],
       celularRespFinanceiro: ['', Validators.required]
-    })
+    });
 
-    this.gerarNumeroMatricula()
+    this.gerarNumeroMatricula();
     let dataMatricula = new Date();
   }
 

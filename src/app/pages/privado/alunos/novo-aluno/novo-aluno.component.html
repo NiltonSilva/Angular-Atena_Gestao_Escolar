@@ -24,6 +24,15 @@
             name="aluno"
             formControlName="nomeAluno"
           />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('nomeAluno')?.errors &&
+              formulario.get('nomeAluno')?.touched
+            "
+          >
+            Nome do aluno é obrigatório
+          </div>
         </div>
         <div class="col-3 form-item">
           <label class="label_form" for="serie"> Série:</label>
@@ -45,7 +54,20 @@
           <label class="label_form" for="dataNascimento"
             >Data de Nascimento</label
           >
-          <input type="date" class="input_form" />
+          <input
+            type="date"
+            class="input_form"
+            formControlName="dataNascimento"
+          />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('dataNascimento')?.errors &&
+              formulario.get('dataNascimento')?.touched
+            "
+          >
+            Data de nascimento é obrigatório.
+          </div>
         </div>
         <div class="col-4 form-item">
           <label class="label_form" for="rg">Número RG:</label>
@@ -60,30 +82,79 @@
       <div class="form-row">
         <div class="col-5 form-item">
           <label class="label_form" for="nomeMae">Mãe:</label>
-          <input type="text" class="input_form" placeholder="Nome da mãe" />
+          <input
+            type="text"
+            class="input_form"
+            placeholder="Nome da mãe"
+            formControlName="nomeMae"
+          />
+          <div
+            class="mensagem__erro"
+            id="datNascimento"
+            *ngIf="
+              formulario.get('nomeMae')?.errors &&
+              formulario.get('nomeMae')?.touched
+            "
+          >
+            Nome da mãe do aluno é obrigatório.
+          </div>
         </div>
         <div class="col-3 form-item">
-          <label class="label_form" for="foneMae1">Telefone mãe:</label>
-          <input type="text" class="input_form" placeholder="(xx)xxxx-xxxx" />
+          <label class="label_form" for="telefoneMae">Telefone mãe:</label>
+          <input
+            type="text"
+            class="input_form"
+            placeholder="(xx)xxxx-xxxx"
+            formControlName="telefoneMae"
+          />
         </div>
         <div class="col-3 form-item">
-          <label class="label_form" for="foneMae2">Celular mãe:</label>
-          <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
+          <label class="label_form" for="celularMae">Celular mãe:</label>
+          <input
+            type="text"
+            class="input_form"
+            placeholder="(xx)9xxxx-xxxx"
+            formControlName="celularMae"
+          />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('celularMae')?.errors &&
+              formulario.get('celularMae')?.touched
+            "
+          >
+            Número de celular da mãe é obrigatório.
+          </div>
         </div>
       </div>
 
       <div class="form-row">
         <div class="col-5 form-item">
           <label class="label_form" for="nomePai">Pai:</label>
-          <input type="text" class="input_form" placeholder="Nome do pai" />
+          <input
+            type="text"
+            class="input_form"
+            placeholder="Nome do pai"
+            formControlName="nomePai"
+          />
         </div>
         <div class="col-3 form-item">
-          <label class="label_form" for="fonePai1">Telefone pai:</label>
-          <input type="text" class="input_form" placeholder="(xx)xxxx-xxxx" />
+          <label class="label_form" for="telefonePai">Telefone pai:</label>
+          <input
+            type="text"
+            class="input_form"
+            placeholder="(xx)xxxx-xxxx"
+            formControlName="telefonePai"
+          />
         </div>
         <div class="col-3 form-item">
-          <label class="label_form" for="fonePai2">Celular pai:</label>
-          <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
+          <label class="label_form" for="celularPai">Celular pai:</label>
+          <input
+            type="text"
+            class="input_form"
+            placeholder="(xx)9xxxx-xxxx"
+            formControlName="celularPai"
+          />
         </div>
       </div>
 
@@ -118,6 +189,14 @@
             placeholder="CEP"
             formControlName="cep"
           />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('cep')?.errors && formulario.get('cep')?.touched
+            "
+          >
+            CEP é um campo obrigatório.
+          </div>
         </div>
         <div class="col-5 form-item">
           <label class="label_form" for="logradouro">Lograudoro:</label>
@@ -127,6 +206,15 @@
             placeholder="Logradouro"
             formControlName="logradouro"
           />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('logradouro')?.errors &&
+              formulario.get('logradouro')?.touched
+            "
+          >
+            Logradouro é um campo obrigatório.
+          </div>
         </div>
         <div class="col-3 form-item">
           <label class="label_form" for="numeroCasa">Nº:</label>
@@ -136,6 +224,15 @@
             placeholder="Número da casa"
             formControlName="numeroCasa"
           />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('numeroCasa')?.errors &&
+              formulario.get('numeroCasa')?.touched
+            "
+          >
+            Número da casa é obrigatório.
+          </div>
         </div>
       </div>
       <div class="form-row">
@@ -156,6 +253,15 @@
             placeholder="Bairro"
             formControlName="bairro"
           />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('bairro')?.errors &&
+              formulario.get('bairro')?.touched
+            "
+          >
+            Bairro é obrigatório.
+          </div>
         </div>
         <div class="col-3 form-item">
           <label class="label_form" for="cidade">Cidade:</label>
@@ -165,6 +271,15 @@
             placeholder="Cidade"
             formControlName="cidade"
           />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('cidade')?.errors &&
+              formulario.get('cidade')?.touched
+            "
+          >
+            Cidade é obrigatório.
+          </div>
         </div>
       </div>
     </div>
@@ -181,6 +296,15 @@
             placeholder="Responsável Financeiro"
             formControlName="responsavelFinanceiro"
           />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('responsavelFinanceiro')?.errors &&
+              formulario.get('responsavelFinanceiro')?.touched
+            "
+          >
+            Um Responsável Financeiro é obrigatório.
+          </div>
         </div>
         <div class="col-3 form-item">
           <label class="label_form" for="cpfResponsavelFinanceiro"
@@ -190,17 +314,37 @@
             type="text"
             class="input_form"
             placeholder="CPF Responsável Financeiro"
-            formControlName=""
+            formControlName="cpfRespFinanceiro"
           />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('cpfRespFinanceiro')?.errors &&
+              formulario.get('cpfRespFinanceiro')?.touched
+            "
+          >
+            O CPF do resp. financeiro é obrigatório.
+          </div>
         </div>
         <div class="col-3 form-item">
-          <label
-            class="label_form"
-            for="CelularRespFinanceiro"
-            formControlName="celularRespFinanceiro"
+          <label class="label_form" for="CelularRespFinanceiro"
             >Celular Resp. Financeiro:</label
           >
-          <input type="text" class="input_form" placeholder="(xx)9xxxx-xxxx" />
+          <input
+            type="text"
+            class="input_form"
+            placeholder="(xx)9xxxx-xxxx"
+            formControlName="celularRespFinanceiro"
+          />
+          <div
+            class="mensagem__erro"
+            *ngIf="
+              formulario.get('celularRespFinanceiro')?.errors &&
+              formulario.get('celularRespFinanceiro')?.touched
+            "
+          >
+            O celular do resp. financeiro é obrigatório.
+          </div>
         </div>
       </div>
     </div>
