@@ -22,27 +22,27 @@ export class NovoAlunoComponent implements OnInit {
       + "/")
     + this.dataMatricula.getFullYear());
 
-
-
   constructor(
     private formBuilder: FormBuilder
   ) { }
 
   ngOnInit(): void {
+    this.gerarNumeroMatricula();
 
     this.formulario = this.formBuilder.group({
       numeroMatricula: [`${this.numMatricula}`, Validators.required],
       nomeAluno: ['', Validators.required],
-      serie: ['', [Validators.required]],
+      // serie: [``, [Validators.required]],
+      serie: [''],
       dataNascimento: ['', [Validators.required]],
       numeroRg: [''],
       numeroCpf: [''],
       nomeMae: ['', Validators.required],
       telefoneMae: ['', Validators.required],
       celularMae: ['', Validators.required],
-      nomePai: ['', Validators.required],
+      nomePai: [''],
       telefonePai: [''],
-      celularPai: [],
+      celularPai: [''],
       endereco: this.formBuilder.group({
         cep: ['', Validators.compose([Validators.required, Validators.maxLength(9)])],
         logradouro: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
@@ -50,15 +50,12 @@ export class NovoAlunoComponent implements OnInit {
         complemento: [''],
         bairro: ['', Validators.required],
         cidade: ['', Validators.required],
-        estado: ['', Validators.required],
+        estado: ['Ceará', Validators.required],
       }),
       responsavelFinanceiro: ['', Validators.required],
       cpfRespFinanceiro: ['', Validators.compose([Validators.required, Validators.minLength(11)])],
       celularRespFinanceiro: ['', Validators.required]
     });
-
-    this.gerarNumeroMatricula();
-    let dataMatricula = new Date();
   }
 
   gerarNumeroMatricula() {
@@ -72,13 +69,15 @@ export class NovoAlunoComponent implements OnInit {
       + this.numDia.toString().padStart(2, '0')
       + this.numAleat.toString().padStart(2, '0')
 
-    console.log(this.numMatricula)
-
     this.adicionarUnidadeNumeroMatricula();
   }
 
   adicionarUnidadeNumeroMatricula(): number {
     return this.numAleat++;
+  }
+
+  criarAluno(): void {
+    console.log(this.formulario)
   }
 
 }

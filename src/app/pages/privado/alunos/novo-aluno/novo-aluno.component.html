@@ -5,7 +5,7 @@
     </div>
     <div class="header-buttons">
       <app-botao-voltar></app-botao-voltar>
-      <app-botao-salvar></app-botao-salvar>
+      <app-botao-salvar (click)="criarAluno()"></app-botao-salvar>
     </div>
   </div>
   <form action="" [formGroup]="formulario">
@@ -37,15 +37,15 @@
         </div>
         <div class="col-3 form-item">
           <label class="label_form" for="serie"> Série:</label>
-          <select name="serie" class="select_form">
+          <select name="serie" class="select_form" id="select_form">
             <option selected value="">Selecione uma série</option>
-            <option value="sext_fun">6º - Fundamental II</option>
-            <option value="seti_fun">7º - Fundamental II</option>
-            <option value="oita_fun">8º - Fundamental II</option>
-            <option value="nono_fun">9º - Fundamental II</option>
-            <option value="prim_med">1º - Médio</option>
-            <option value="segu_med">2º - Médio</option>
-            <option value="terc_med">3º - Médio</option>
+            <option value="sexto_fundamental">6º - Fundamental II</option>
+            <option value="setimo_fundamental">7º - Fundamental II</option>
+            <option value="oitavo_fundamental">8º - Fundamental II</option>
+            <option value="nono_fundamental">9º - Fundamental II</option>
+            <option value="primeiro_medio">1º - Médio</option>
+            <option value="segundo_medio">2º - Médio</option>
+            <option value="terceiro_medio">3º - Médio</option>
           </select>
         </div>
       </div>
