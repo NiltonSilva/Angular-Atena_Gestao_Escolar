@@ -2,7 +2,7 @@ export interface Aluno {
   matricula: number,
   nome: string,
   serie: string,
-  dataNascimento: Date,
+  dataNascimento?: Date,
   rg?: string,
   cpf?: string,
   mae: string,

@@ -1,1 +1,5 @@
-<p>listar-alunos works!</p>
+<div *ngIf="listaAlunos.length > 0">
+  <div *ngFor="let aluno of listaAlunos">
+    <app-aluno [aluno]="aluno"></app-aluno>
+  </div>
+</div>

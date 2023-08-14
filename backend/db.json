@@ -1,0 +1,58 @@
+{
+  "alunos": [
+    {
+      "matricula": 23081301,
+      "nome": "Nádia Silva Ferreira",
+      "serie": "oitavo_fundamental",
+      "dataNascimento": "",
+      "rg": "2001003225566",
+      "cpf": "07380644010",
+      "mae": "Lucilene Silva Ferreira",
+      "telefoneMae": "8532361154",
+      "celularMae": "85994076000",
+      "pai": "José Ferreira Filho",
+      "telefonePai": "32361154",
+      "celularPai": "85997730802",
+      "foto": "",
+      "endereco": {
+        "cep": "60311310",
+        "logradouro": "Rua Santa Inês",
+        "numeroCasa": "982",
+        "complemento": "Casa A",
+        "bairro": "Pirambu",
+        "cidade": "Fortaleza",
+        "estado": "Ceará"
+      },
+      "responsavelFinanceiro": "José Ferreira Filho",
+      "cpfRespFinanceiro": "01044608307",
+      "celularRespFinanceiro": "85997730802"
+    },
+    {
+      "matricula": 23081302,
+      "nome": "Nilton Silva Ferreira",
+      "serie": "sexto_fundamental",
+      "dataNascimento": "",
+      "rg": "2005002117799",
+      "cpf": "01044608307",
+      "mae": "Lucilene Silva Ferreira",
+      "telefoneMae": "8532361154",
+      "celularMae": "85994076000",
+      "pai": "José Ferreira Filho",
+      "telefonePai": "32361154",
+      "celularPai": "85997730802",
+      "foto": "",
+      "endereco": {
+        "cep": "60311310",
+        "logradouro": "Rua Santa Inês",
+        "numeroCasa": "982",
+        "complemento": "Casa A",
+        "bairro": "Pirambu",
+        "cidade": "Fortaleza",
+        "estado": "Ceará"
+      },
+      "responsavelFinanceiro": "José Ferreira Filho",
+      "cpfRespFinanceiro": "01044608307",
+      "celularRespFinanceiro": "85997730802"
+    }
+  ]
+}

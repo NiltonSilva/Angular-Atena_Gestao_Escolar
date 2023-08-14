@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AlunosService } from 'src/app/core/services/alunos/alunos.service';
 
 @Component({
   selector: 'app-novo-aluno',
@@ -23,7 +25,9 @@ export class NovoAlunoComponent implements OnInit {
     + this.dataMatricula.getFullYear());
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private service: AlunosService
   ) { }
 
   ngOnInit(): void {
@@ -77,7 +81,15 @@ export class NovoAlunoComponent implements OnInit {
   }
 
   criarAluno(): void {
-    console.log(this.formulario)
+    console.log(this.formulario);
+
+    if (this.formulario.valid) {
+      console.log("oi");
+
+      this.service.criar(this.formulario.value).subscribe(() => {
+        console.log("Deu certo!");
+      })
+    }
   }
 
 }

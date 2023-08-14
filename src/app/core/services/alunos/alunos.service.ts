@@ -18,4 +18,8 @@ export class AlunosService {
     return this.http.post<Aluno>(this.urlAPI, aluno);
   }
 
+  listar(): Observable<Aluno[]> {
+    return this.http.get<Aluno[]>(this.urlAPI);
+  }
+
 }

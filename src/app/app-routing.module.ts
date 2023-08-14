@@ -21,7 +21,7 @@ const routes: Routes = [
     component: NovoAlunoComponent
   },
   {
-    path: 'listarAluno',
+    path: 'listarAlunos',
     component: ListarAlunosComponent
   },
   {

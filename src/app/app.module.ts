@@ -16,6 +16,8 @@ import { BibliotecaComponent } from './pages/privado/biblioteca/biblioteca.compo
 import { Error404Component } from './pages/privado/shared/componentes/error404/error404.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { HttpClientModule } from '@angular/common/http';
+import { AlunoComponent } from './pages/privado/alunos/aluno/aluno.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import { NgxMaskModule, IConfig } from 'ngx-mask'
     BotaoVoltarComponent,
     BotaoSalvarComponent,
     BibliotecaComponent,
-    Error404Component
+    Error404Component,
+    AlunoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
     })
