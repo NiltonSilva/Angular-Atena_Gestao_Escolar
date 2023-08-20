@@ -45,11 +45,11 @@
 .none {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s linear;
+  transition: max-height 0.3s linear;
 }
 
 .show {
   max-height: 100px;
   overflow: hidden;
-  transition: max-height 0.2s linear;
+  transition: max-height 0.3s linear;
 }
