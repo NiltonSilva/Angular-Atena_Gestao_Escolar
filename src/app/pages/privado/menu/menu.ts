@@ -40,7 +40,7 @@ export const appMenu: IMenu = {
       open: true,
       subMenus: [
         {
-          title: 'Novo Aluno',
+          title: 'Matricular Aluno',
           svgIcon: '',
           source: '/novoAluno'
         },
@@ -56,13 +56,37 @@ export const appMenu: IMenu = {
       title: 'Professores',
       svgIcon: './../../../../assets/icones/person-chalkboard-light.svg',
       source: '/novoProfessor',
-      open: true
+      open: true,
+      subMenus: [
+        {
+          title: 'Cadastrar Professor',
+          svgIcon: '',
+          source: '/novoProfessor'
+        },
+        {
+          title: 'Listar Professores',
+          svgIcon: '',
+          source: '/listarProfessores'
+        }
+      ]
     },
     {
       id: 4,
       title: 'Biblioteca',
       svgIcon: './../../../../assets/icones/books-light.svg',
-      source: 'biblioteca'
+      source: 'biblioteca',
+      subMenus: [
+        {
+          title: 'Cadastrar Livro',
+          svgIcon: '',
+          source: '/novoLivro'
+        },
+        {
+          title: 'Buscar Livros',
+          svgIcon: '',
+          source: '/listarLivros'
+        }
+      ]
     },
     {
       id: 5,

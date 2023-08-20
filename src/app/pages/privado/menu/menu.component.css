@@ -36,3 +36,20 @@
   height: 20px;
   margin-left: 30px;
 }
+
+.lista_SubMenu {
+  list-style: none;
+  margin-left: 60px;
+}
+
+.none {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s linear;
+}
+
+.show {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.2s linear;
+}
