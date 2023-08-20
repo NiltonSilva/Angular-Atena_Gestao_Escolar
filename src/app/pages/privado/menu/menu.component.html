@@ -5,7 +5,7 @@
         <li
           class="item_menu"
           *ngFor="let item of appMenu.itens"
-          (click)="mudarIconeSeta($event)"
+          (click)="encolherOuExpandirSubMenu($event)"
           id="{{ item.id }}"
         >
           <div class="lista_menu-item">
@@ -14,7 +14,7 @@
             <div class="container-icone-seta" *ngIf="item.subMenus">
               <img
                 class="icone-seta"
-                src="assets/icones/{{ iconeSeta }}.svg"
+                src="assets/icones/angle-right-light.svg"
                 alt=""
               />
             </div>

@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IMenu, appMenu } from './menu';
-import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
 
 @Component({
   selector: 'app-menu',
@@ -10,33 +9,30 @@ import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
 export class MenuComponent implements OnInit {
 
   appMenu: IMenu = appMenu;
-  iconeSeta: string = 'angle-right-light';
 
   constructor() { }
 
   ngOnInit(): void { }
 
-  mudarIconeSeta(event: Event): string {
-    this.encolherOuExpandirSubMenu(event);
-    if (this.iconeSeta == "angle-right-light") {
-      return this.iconeSeta = "angle-down-light";
-    } else {
-      return this.iconeSeta = "angle-right-light"
-    }
-
-  }
-
   encolherOuExpandirSubMenu(event: Event) {
     this.encolherTodosOsSubMenus(event);
 
     let target: any = event.currentTarget;
+    let arrow: any = target?.children[0]?.children[2]?.firstChild
+
     target.children[1]?.classList.toggle('show');
+
+    if (target.children[1]?.classList.contains('show')) {
+      arrow.style.transform = "rotate(90deg)";
+    } else {
+      arrow.style.transform = "rotate(0deg)";
+    }
   }
 
   encolherTodosOsSubMenus(event: Event) {
 
-    let localCLique: any = event.currentTarget;
-    let menu: any = localCLique.parentElement.children;
+    let target: any = event.currentTarget;
+    let menu: any = target.parentElement.children;
     let listaMenu: any = [...menu];
 
     for (let i = 0; i < listaMenu.length; i++) {
