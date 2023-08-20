@@ -38,6 +38,18 @@ export const appMenu: IMenu = {
       svgIcon: './../../../../assets/icones/person-light.svg',
       source: '/novoAluno',
       open: true,
+      subMenus: [
+        {
+          title: 'Novo Aluno',
+          svgIcon: '',
+          source: '/novoAluno'
+        },
+        {
+          title: 'Listar Alunos',
+          svgIcon: '',
+          source: '/listarAlunos'
+        }
+      ]
     },
     {
       id: 3,

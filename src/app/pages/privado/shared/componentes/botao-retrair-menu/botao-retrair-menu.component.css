@@ -1,0 +1,37 @@
+.botao-retrair_menu {
+  width: 300px;
+  background: rgb(219, 218, 218);
+  display: flex;
+  height: 70px;
+}
+
+.botao-retrair_menu-imagem {
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-retrair_menu-icone {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-retrair_menu {
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.imagem-retrair_menu {
+  width: 20px;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.imagem-botao-retrair_menu {
+  height: 60px;
+}
+

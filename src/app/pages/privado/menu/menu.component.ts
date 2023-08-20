@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IMenu, appMenu } from './menu';
+import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
 
 @Component({
   selector: 'app-menu',
@@ -22,4 +23,8 @@ export class MenuComponent implements OnInit {
       return this.iconeSeta = "angle-right-light"
     }
   }
+
+
+
+
 }

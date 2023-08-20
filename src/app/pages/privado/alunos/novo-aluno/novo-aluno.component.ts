@@ -82,14 +82,7 @@ export class NovoAlunoComponent implements OnInit {
 
   criarAluno(): void {
     console.log(this.formulario);
-
-    if (this.formulario.valid) {
-      console.log("oi");
-
-      this.service.criar(this.formulario.value).subscribe(() => {
-        console.log("Deu certo!");
-      })
-    }
+    this.service.criar(this.formulario.value).subscribe();
   }
 
 }

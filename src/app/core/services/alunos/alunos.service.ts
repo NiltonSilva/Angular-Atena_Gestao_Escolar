@@ -15,6 +15,7 @@ export class AlunosService {
   ) { }
 
   criar(aluno: Aluno): Observable<Aluno> {
+    console.log(aluno);
     return this.http.post<Aluno>(this.urlAPI, aluno);
   }
 

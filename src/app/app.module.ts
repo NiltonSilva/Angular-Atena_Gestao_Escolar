@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { HttpClientModule } from '@angular/common/http';
 import { AlunoComponent } from './pages/privado/alunos/aluno/aluno.component';
+import { BotaoRetrairMenuComponent } from './pages/privado/shared/componentes/botao-retrair-menu/botao-retrair-menu.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AlunoComponent } from './pages/privado/alunos/aluno/aluno.component';
     BotaoSalvarComponent,
     BibliotecaComponent,
     Error404Component,
-    AlunoComponent
+    AlunoComponent,
+    BotaoRetrairMenuComponent
   ],
   imports: [
     BrowserModule,
