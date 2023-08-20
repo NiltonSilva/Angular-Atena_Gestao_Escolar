@@ -5,22 +5,30 @@
         <li
           class="item_menu"
           *ngFor="let item of appMenu.itens"
-          (click)="mudarIconeSeta($event)"
+          (click)="encolherOuExpandirSubMenu($event)"
           id="{{ item.id }}"
         >
-          <a routerLink="{{ item.source }}">
-            <div class="lista_menu-item">
-              <img class="icone_contexto" [src]="item.svgIcon" alt="" />
-              <p class="titulo">{{ item.title }}</p>
-              <div class="container-icone-seta" *ngIf="item.open">
-                <img
-                  class="icone-seta"
-                  src="assets/icones/{{ iconeSeta }}.svg"
-                  alt=""
-                />
-              </div>
+          <div class="lista_menu-item">
+            <img class="icone_contexto" [src]="item.svgIcon" alt="" />
+            <p class="titulo">{{ item.title }}</p>
+            <div class="container-icone-seta" *ngIf="item.subMenus">
+              <img
+                class="icone-seta"
+                src="assets/icones/angle-right-light.svg"
+                alt=""
+              />
             </div>
-          </a>
+          </div>
+
+          <ul class="lista_SubMenu none" *ngIf="item.subMenus">
+            <li class="subItem_menu" *ngFor="let subItem of item.subMenus">
+              <a routerLink="{{ subItem.source }}">
+                <div class="lista_subMenu-item">
+                  <p class="titulo">{{ subItem.title }}</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
